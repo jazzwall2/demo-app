@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
     selector: 'app-hello',
@@ -6,13 +6,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HelloComponent implements OnInit{
 
+    @Input("user") userName: String;
+
     ngOnInit(){
-        this.userName = "John Smith";
+        //this.userName = "John Smith";
     }
-    userName: String;
 
     doSomething(){
         console.log('Button Clicked');
     }
+
+    // @Input() nameOfUser: string;
 
 }

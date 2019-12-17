@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +7,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Demo App';
+  someNumber = 5;
+  myInfo = 'this is some information';
+  textAreaToggle = false;
+  myName = "John Smith";
+  showSomething(){
+    console.log('something');
+  }
+  toggleTextArea(){
+    console.log('toggle called');
+    this.textAreaToggle = !this.textAreaToggle;
+  }
 }
