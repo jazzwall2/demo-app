@@ -7,15 +7,11 @@ import { Component, Input } from '@angular/core';
 })
 export class AppComponent {
   title = 'Demo App';
-  someNumber = 5;
-  myInfo = 'this is some information';
-  textAreaToggle = false;
+
   myName = "John Smith";
-  showSomething(){
-    console.log('something');
+
+  onHelloChange(event: string){
+    this.myName = event;
   }
-  toggleTextArea(){
-    console.log('toggle called');
-    this.textAreaToggle = !this.textAreaToggle;
-  }
+
 }

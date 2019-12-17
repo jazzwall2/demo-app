@@ -1,4 +1,6 @@
 
-<input type="text" [(ngModel)]="userName">
+<input type="text" 
+    (keyup)="onUserNameChange()"
+    [(ngModel)]="userName"/>
 <button (click)="doSomething()">Click Me</button>
 <p>Hello {{userName}}</p>
